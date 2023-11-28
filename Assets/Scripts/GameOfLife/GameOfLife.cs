@@ -89,7 +89,7 @@ public class GameOfLife : MonoBehaviour
 
     public void UpdateNextGrid()
     {
-        // Päivittää nykyisestä gridistä (grid_current[,]) kaikki solut seuraavaa tilaa kuvaavaan gridiin (grid_next[,]).
+        // Pï¿½ivittï¿½ï¿½ nykyisestï¿½ gridistï¿½ (grid_current[,]) kaikki solut seuraavaa tilaa kuvaavaan gridiin (grid_next[,]).
         for (int x = 0; x < Width; x++)
         {
             for (int y = 0; y < Height; y++)
@@ -107,10 +107,10 @@ public class GameOfLife : MonoBehaviour
                     // live on... do nothing
                 }
                 // 3. more than 3 live neighbours -> die
-                else if (live > 3 && next_grid[x, y] == true)
+                else if (live > 3 && current_grid[x, y] == true)
                     next_grid[x, y] = false;
                 // 4. dead cell with 3 live neighbours -> rebirth
-                else if (live == 3 && next_grid[x, y] == false)
+                else if (live == 3 && current_grid[x, y] == false)
                     next_grid[x, y] = true;
 
             }
@@ -129,7 +129,7 @@ public class GameOfLife : MonoBehaviour
 
     public void UpdateTiles()
     {
-        // käy läpi gridin ja päivittää tiles[,]-muuttujassa olevien peliobjektien värin.
+        // kï¿½y lï¿½pi gridin ja pï¿½ivittï¿½ï¿½ tiles[,]-muuttujassa olevien peliobjektien vï¿½rin.
 
         // Update tiles
         for (int x = 0; x < Width; x++)
